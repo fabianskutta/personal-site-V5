@@ -1,0 +1,34 @@
+footer {
+    background-color: var(--footer-bg);
+    margin: 0 2rem;
+    padding: 1rem ;
+    border-radius: 20px 20px 0 0;
+
+    h1 {
+        margin: 0;
+        font-size: 1.25rem;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-column {
+        display: flex;
+        align-items: center;
+
+        .fa-heart {
+            color: #F9063B;
+        }
+
+        li {
+            margin: 0 0 0 1rem;
+            list-style: none;
+        }
+    }
+}

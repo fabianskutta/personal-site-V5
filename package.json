@@ -1,0 +1,26 @@
+{
+	"name": "personal-site-v5",
+	"private": false,
+	"version": "5.0.0",
+	"scripts": {
+		"dev": "vite --host",
+		"build": "vite build",
+		"test": "vitest",
+		"coverage": "vitest run --coverage",
+		"preview": "vite preview",
+		"format": "prettier --write \"src/**/*.js\" \"src/**/*.html\" \"src/**/*.scss\""
+	},
+	"devDependencies": {
+		"c8": "^7.11.3",
+		"sass": "^1.49.9",
+		"vite": "^2.8.0",
+		"vitest": "^0.13.0"
+	},
+	"dependencies": {
+		"axios": "^0.27.2",
+		"eslint": "^8.10.0",
+		"eslint-config-prettier": "^8.4.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"prettier": "^2.5.1"
+	}
+}
