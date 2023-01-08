@@ -1,12 +1,19 @@
+
 function updateStatus() {
     axios.get('https://api.lanyard.rest/v1/users/628637707366694932')
       .then(res => {
         let data = res.data.data;
         if (data.listening_to_spotify) {
-          let artist = data.spotify.artist.replace(";",",");
-          document.getElementById('spotify').innerHTML = `<i class="fab fa-spotify" style="color:#1DB954"></i> <a class="noAStyle" target="_blank" href="https://open.spotify.com/track/${data.spotify.track_id}">${data.spotify.song} by <i>${artist}</i></a>`;
+          document.getElementById('spotify').innerHTML = `<i class="fab fa-spotify" style="color:#1DB954"></i> <a class="noAStyle" target="_blank" href="https://open.spotify.com/track/${data.spotify.track_id}">${data.spotify.song} by <i>${data.spotify.artist}</i></a>`;
+          document.getElementById('spotifyimg').innerHTML = `<img id="spotifyCover" src="${data.spotify.album_art_url}" crossOrigin="anonymous" alt="">`;
+          setTimeout(function(){
+            var rgb = getAverageRGB(document.getElementById('spotifyCover'));
+            document.getElementsByTagName( 'html' )[0].style.setProperty('--accent2', 'rgb('+rgb.r+','+rgb.g+','+rgb.b+','+0.30+')');
+        }, 150);
         } else {
           document.getElementById('spotify').innerHTML = ``;
+          document.getElementById('spotifyimg').innerHTML = ``;
+            document.getElementsByTagName( 'html' )[0].style.removeProperty('--accent2');
         }
         if (data.discord_status === "online") {
           document.getElementById('status-icon').setAttribute('style', 'color:' + '#43B581' + ';');
@@ -38,3 +45,50 @@ function updateStatus() {
 
 updateStatus()
 setInterval(updateStatus, 15000);
+
+
+function getAverageRGB(imgEl) {
+
+  var blockSize = 5, // only visit every 5 pixels
+      defaultRGB = {r:249,g:6,b:59}, // for non-supporting envs
+      canvas = document.createElement('canvas'),
+      context = canvas.getContext && canvas.getContext('2d'),
+      data, width, height,
+      i = -4,
+      length,
+      rgb = {r:0,g:0,b:0},
+      count = 0;
+      
+  if (!context) {
+      return defaultRGB;
+  }
+  
+  height = canvas.height = imgEl.naturalHeight || imgEl.offsetHeight || imgEl.height;
+  width = canvas.width = imgEl.naturalWidth || imgEl.offsetWidth || imgEl.width;
+  
+  context.drawImage(imgEl, 0, 0);
+  
+  try {
+      data = context.getImageData(0, 0, width, height);
+  } catch(e) {
+      return defaultRGB;
+  }
+  
+  length = data.data.length;
+  
+  while ( (i += blockSize * 4) < length ) {
+      ++count;
+      rgb.r += data.data[i];
+      rgb.g += data.data[i+1];
+      rgb.b += data.data[i+2];
+  }
+  
+  // ~~ used to floor values
+  rgb.r = ~~(rgb.r/count);
+  rgb.g = ~~(rgb.g/count);
+  rgb.b = ~~(rgb.b/count);
+  
+  return rgb;
+  
+  }
+  

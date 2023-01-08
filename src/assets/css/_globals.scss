@@ -1,6 +1,5 @@
 html {
     scroll-behavior: smooth;
-    height: 100%;
     color: var(--text1);
     font-family: 'Space Grotesk', sans-serif;
   }
@@ -8,6 +7,7 @@ html {
 body {
     background-color: var(--background1);
     margin: 0;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 * {
@@ -19,4 +19,31 @@ a {
   text-decoration: none;
   position: relative;
   cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover); 
+}
+
+main {
+  padding: var(--margin);
+}
+
+@media screen and (max-width: 1200px) {
+  .noMobile {
+    display: none;
+  }
 }

@@ -1,34 +1,27 @@
 html {
+    --accent1: #F9063B;
+    --accent2: #F9063B28;
     --background1: #181A22;
     --background2: #262935;
     --background3: #26293542;
     --background4: #262935bb;
+    --backgroundBtn: #f6f6f61a;
+    --backgroundBtn-hover: #f6f6f641;
     --text1: #F6F6F6;
     --scrollbar: #F6F6F6a9;
     --scrollbar-hover: #F6F6F6;
     --footer-bg: #000000;
+
+    --margin: 2rem;
 }
 
-@media (prefers-color-scheme: light) {
-
-    html {
-        --background1: #F6F6F6;
-        --background2: #9599ac42;
-        --background3: #9599ac42;
-        --background4: #9599acbb;
-        --text1: #181A22;
-        --scrollbar: #181A22a9;
-        --scrollbar-hover: #181A22;
-        --footer-bg: #ffffff;
-    }
-
-  }
 
 .lightmode {
         --background1: #F6F6F6;
-        --background2: #9599ac42;
         --background3: #9599ac42;
         --background4: #9599acbb;
+        --backgroundBtn: #181A221a;
+        --backgroundBtn-hover: #181A2241;
         --text1: #181A22;
         --scrollbar: #181A22a9;
         --scrollbar-hover: #181A22;
@@ -40,8 +33,16 @@ html {
     --background2: #262935;
     --background3: #26293542;
     --background4: #262935bb;
+    --backgroundBtn: #f6f6f61a;
+    --backgroundBtn-hover: #f6f6f641;
     --text1: #F6F6F6;
-    --scrollbar: #F6F6F6a9;
-    --scrollbar-hover: #F6F6F6;
+    --scrollbar: #f6f6f679;
+    --scrollbar-hover: #f6f6f6be;
     --footer-bg: #000000;
 }
+
+@media screen and (max-width: 900px) {
+    html {
+        --margin: 1.25rem;
+    }
+  }

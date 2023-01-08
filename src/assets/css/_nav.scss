@@ -1,6 +1,6 @@
 nav {
     position: fixed;
-    padding: 2rem;
+    padding: var(--margin);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,7 +9,6 @@ nav {
     right: 0;
     left: 0;
     top: 0;
-    transition: 0.3s;
     z-index: 600;
 
     .nav-links {
@@ -19,7 +18,6 @@ nav {
 
         li {
             margin: 0 1rem;
-            padding: 0 1rem;
             font-size: 18px;
             list-style: none;
             z-index: 600;
@@ -29,14 +27,19 @@ nav {
         }
 
         a {
-            transition: all 0.3s;
+            padding: 0.75rem 1rem;
+            background-color: var(--backgroundBtn);
+            border-radius: 10px;
+            transition: 0.3s;
         }
+
     }
 
     .nav-btns {
         left: 0;
         display: flex;
         margin: 0;
+        padding: 0;
 
         li {
             margin: 0 0.25rem;
@@ -46,32 +49,101 @@ nav {
         }
 
         a {
-            padding: 0.8rem;
-            border-radius: 50px;
+            display: inline-block;
+            padding: 0.75rem 1rem;
+            background-color: var(--backgroundBtn);
+            border-radius: 10px;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+
+            i {
+                position: absolute;
+            }
+
+            .menuIcon {
+                transform: translateX(-10%);
+            }
+            
         }
     }
 
     h1 {
-        margin: 0;  
+        margin: 0; 
+    }
+
+    #hamburger {
+        display: none;
     }
 
 }
 
 .nav-bg {
     backdrop-filter: blur(100px);
-    background-color: var(--background3);
+    -webkit-backdrop-filter: blur(100px);
+    //background-color: var(--background3);
 }
 
 @media screen and (min-width: 900px) {
-
-    .nav-links:hover {
-      a{
-        color: var(--scrollbar);
-      }
-    }
   
     .nav-links a:hover {
-      transform: scale(1.09);
-      color: var(--text1);
+      background-color: var(--backgroundBtn-hover);
   }
+
+  .nav-btns a:hover {
+    background-color: var(--backgroundBtn-hover);
+  }
+}
+
+  @media screen and (max-width: 1200px) {
+
+    nav {
+        justify-content: none;
+
+        #hamburger {
+            display: inline-block;
+          }
+          
+          .nav-links {
+            position: fixed;
+            display: inline-block;
+            transform: translateY(-100%);
+            transition: transform 0.2s;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            backdrop-filter: blur(100px);
+            -webkit-backdrop-filter: blur(100px);
+            background-color: var(--background3);
+            list-style: none;
+            padding: 100px 0 50px 0;
+          }
+          
+          .showMenu {
+            transform: translateY(0);
+          }
+
+          .closeIcon {
+            display: none;
+          }
+
+          .menuItem {
+            width: 100%;
+            margin: 0.25rem;
+            text-align: center;
+          }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+
+    nav {
+          h1 {
+            font-size: 1.75rem;
+        }
+    }
   }

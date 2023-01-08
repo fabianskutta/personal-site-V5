@@ -5,6 +5,8 @@ import '../css/main.scss';
 import '../js/heroAnimation';
 import '../js/bar';
 import '../js/mode';
+import '../js/nav';
+import '../js/footer';
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
