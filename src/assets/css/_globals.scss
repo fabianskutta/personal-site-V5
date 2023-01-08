@@ -42,6 +42,12 @@ main {
   padding: var(--margin);
 }
 
+.soon {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 @media screen and (max-width: 1200px) {
   .noMobile {
     display: none;
