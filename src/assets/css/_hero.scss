@@ -36,6 +36,17 @@
         font-weight: 700;
         margin: 0;
         color: var(--text2);
+
+        img {
+          -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-name: wave-animation;
+          animation-name: wave-animation;
+          height: 60px;
+          transform-origin: 70% 70%;
+        }
     }
 
     p {
@@ -174,6 +185,10 @@
         font-size: 4rem;
         font-weight: 700;
         margin: 0;
+
+        img {
+          height: 50px;
+        }
     }
 
     p {
@@ -197,3 +212,30 @@
   }
 
 }
+
+@keyframes wave-animation {
+  0% {
+   transform:rotate(0deg)
+  }
+  15% {
+   transform:rotate(14deg)
+  }
+  30% {
+   transform:rotate(-8deg)
+  }
+  40% {
+   transform:rotate(14deg)
+  }
+  50% {
+   transform:rotate(-4deg)
+  }
+  60% {
+   transform:rotate(10deg)
+  }
+  70% {
+   transform:rotate(0deg)
+  }
+  to {
+   transform:rotate(0deg)
+  }
+ }
