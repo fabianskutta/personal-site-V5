@@ -14,7 +14,11 @@ nav {
     .nav-links {
         left: 0;
         display: flex;
+        width: 100%;
+        justify-content: center;
         margin: 0;
+        padding: 0;
+        position: absolute;
 
         li {
             margin: 0 1rem;
@@ -91,10 +95,12 @@ nav {
   
     .nav-links a:hover {
       background-color: var(--backgroundBtn-hover);
+      transform: scale(1.06);
   }
 
   .nav-btns a:hover {
     background-color: var(--backgroundBtn-hover);
+    transform: scale(1.06);
   }
 }
 

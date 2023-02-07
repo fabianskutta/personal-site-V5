@@ -53,3 +53,7 @@ main {
     display: none;
   }
 }
+
+::selection {
+  background-color: var(--accent2);
+}
