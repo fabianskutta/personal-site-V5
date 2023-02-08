@@ -86,9 +86,9 @@ nav {
 }
 
 .nav-bg {
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
-    //background-color: var(--background3);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  background-color: var(--background3);
 }
 
 @media screen and (min-width: 900px) {
