@@ -7,6 +7,7 @@ import '../js/bar';
 import '../js/mode';
 import '../js/nav';
 import '../js/footer';
+import '../js/cursor';
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {

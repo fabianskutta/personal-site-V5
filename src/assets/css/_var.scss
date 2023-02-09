@@ -12,7 +12,7 @@ html {
     --scrollbar-hover: #F6F6F6;
     --footer-bg: #000000;
 
-    --margin: 2rem;
+    --margin: 1.25rem;
 }
 
 
@@ -43,6 +43,6 @@ html {
 
 @media screen and (max-width: 900px) {
     html {
-        --margin: 1.25rem;
+        --margin: 1rem;
     }
   }
