@@ -1,15 +1,19 @@
 nav {
     position: fixed;
-    padding: var(--margin);
+    padding: 1.5rem var(--margin);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    left:0;
+    right:0;
     box-sizing: border-box;
     right: 0;
     left: 0;
     top: 0;
     z-index: 600;
+    border-radius: 30px;
+    padding: 1rem var(--margin);
+    margin: 1rem var(--margin);
 
     .nav-links {
         left: 0;
@@ -85,12 +89,6 @@ nav {
 
 }
 
-.nav-bg {
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
-  background-color: var(--background3);
-}
-
 @media screen and (min-width: 900px) {
   
     .nav-links a:hover {
@@ -108,6 +106,8 @@ nav {
 
     nav {
         justify-content: none;
+        backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
 
         #hamburger {
             display: inline-block;
@@ -116,7 +116,7 @@ nav {
           .nav-links {
             position: fixed;
             display: inline-block;
-            transform: translateY(-100%);
+            transform: translateY(-120%);
             transition: transform 0.2s;
             top: 0;
             left: 0;
@@ -127,6 +127,7 @@ nav {
             background-color: var(--background3);
             list-style: none;
             padding: 100px 0 50px 0;
+            border-radius: 30px;
           }
           
           .showMenu {
@@ -152,4 +153,10 @@ nav {
             font-size: 1.75rem;
         }
     }
+  }
+
+  .nav-bg {
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    background-color: var(--background3);
   }
