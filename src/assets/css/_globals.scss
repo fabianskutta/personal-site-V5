@@ -21,6 +21,12 @@ a {
   cursor: pointer;
 }
 
+.page-content {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 960px;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -43,9 +49,19 @@ main {
 }
 
 h3 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   text-align: center;
+}
+
+.pc {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  img {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
