@@ -119,9 +119,9 @@ nav {
             transform: translateY(-100%);
             transition: transform 0.2s;
             z-index: -1;
-            background-color: var(--background3);
-            backdrop-filter: blur(100px);
-            -webkit-backdrop-filter: blur(100px);
+            //background-color: var(--background3);
+            //backdrop-filter: blur(100px);
+            //-webkit-backdrop-filter: blur(100px);
             list-style: none;
             padding: 200px 0 50px 0;
             border-radius: 30px;
