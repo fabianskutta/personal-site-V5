@@ -25,6 +25,7 @@ function lightmode () {
     document.getElementsByTagName( 'html' )[0].classList.add("lightmode");
     document.getElementById('mode').innerHTML = `<i class="fa-solid fa-lightbulb"></i>`;
     localStorage.setItem("mode", "light");
+    changeFavicon(`https://cdn.fabian.lol/logos/favicon-light.png`);
 }
 
 function darkmode () {
@@ -32,15 +33,18 @@ function darkmode () {
     document.getElementsByTagName( 'html' )[0].classList.add("darkmode");
     document.getElementById('mode').innerHTML = `<i class="fa-solid fa-moon"></i>`;
     localStorage.setItem("mode", "dark");
+    changeFavicon(`https://cdn.fabian.lol/logos/favicon.png`);
 }
 
 function devicemode () {
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
         document.getElementsByTagName( 'html' )[0].classList.add("lightmode");
         document.getElementById('mode').innerHTML = `<i class="fa-solid fa-lightbulb"></i>`;
+        changeFavicon(`https://cdn.fabian.lol/logos/favicon-light.png`);
     } else {
         document.getElementsByTagName( 'html' )[0].classList.add("darkmode");
         document.getElementById('mode').innerHTML = `<i class="fa-solid fa-moon"></i>`;
+        changeFavicon(`https://cdn.fabian.lol/logos/favicon.png`);
     }
     localStorage.setItem("mode", "device");
 }
@@ -52,10 +56,25 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
             document.getElementsByTagName( 'html' )[0].classList.remove("darkmode");
             document.getElementsByTagName( 'html' )[0].classList.add("lightmode");
             document.getElementById('mode').innerHTML = `<i class="fa-solid fa-lightbulb"></i>`;
+            changeFavicon(`https://cdn.fabian.lol/logos/favicon-light.png`);
         } else {
             document.getElementsByTagName( 'html' )[0].classList.remove("lightmode");
             document.getElementsByTagName( 'html' )[0].classList.add("darkmode");
             document.getElementById('mode').innerHTML = `<i class="fa-solid fa-moon"></i>`;
+            changeFavicon(`https://cdn.fabian.lol/logos/favicon.png`);
         }
     }
 });
+
+
+function changeFavicon(src) {
+    var link = document.createElement('link'),
+        oldLink = document.getElementById('dynamic-favicon');
+    link.id = 'dynamic-favicon';
+    link.rel = 'shortcut icon';
+    link.href = src;
+    if (oldLink) {
+     document.head.removeChild(oldLink);
+    }
+    document.head.appendChild(link);
+   }
