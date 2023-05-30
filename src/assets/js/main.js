@@ -33,10 +33,3 @@ document.addEventListener("visibilitychange", function() {
     document.title = 'Fabian Skutta • fabian.lol'; 
   }
 })
-
-function click() {
-  document.getElementById("audio").play();
-}
-
-
-document.addEventListener("click", click);

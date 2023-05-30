@@ -14,6 +14,10 @@ nav {
     border-radius: 30px;
     padding: 1rem;
     margin: var(--margin) var(--margin);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 1rem;
+    border-color: rgba(255,255,255,0);
 
     .nav-links {
         left: 0;
@@ -119,18 +123,15 @@ nav {
             transform: translateY(-100%);
             transition: transform 0.2s;
             z-index: -1;
-            //background-color: var(--background3);
-            //backdrop-filter: blur(100px);
-            //-webkit-backdrop-filter: blur(100px);
             list-style: none;
             padding: 200px 0 50px 0;
             border-radius: 30px;
           }
           
           .showMenu {
-            transform: translateY(0);
-            backdrop-filter: blur(100px);
-            -webkit-backdrop-filter: blur(100px);
+            transform: translateY(10%);
+            backdrop-filter: blur(1.35rem);;
+            -webkit-backdrop-filter: blur(1.35rem);;
           }
 
           .closeIcon {
@@ -155,7 +156,14 @@ nav {
   }
 
   .nav-bg {
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
     background-color: var(--background3);
+    background-size: 512px;
+    background-position: center;
+    background-repeat: repeat;
+    -webkit-backdrop-filter: blur(1.35rem);
+    backdrop-filter: blur(1.35rem);
+    border-color: rgba(255,255,255,0.09);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
   }
