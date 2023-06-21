@@ -27,9 +27,9 @@ function getRandom (list) {
 document.addEventListener("visibilitychange", function() {
   if (document.visibilityState === 'hidden') {
     var randomElement = getRandom(['😭 I miss you...', '(4) Matches 🔥', '🤔 Where are you?'])
-    var newtitle = `${randomElement} • fabian.lol`;
+    var newtitle = `${randomElement} • Fabian`;
     document.title = newtitle;
   } else {
-    document.title = 'Fabian Skutta • fabian.lol'; 
+    document.title = 'Fabian Skutta'; 
   }
 })
