@@ -12,16 +12,19 @@
     <link rel="icon" type="image/png" href="https://cdn.fabian.lol/logos/favicon.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://cdn.fabian.lol/logos/favicon.png" sizes="96x96">
 
-    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="https://kit.fontawesome.com/97e635c580.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
 </head>
 <body>
     <nav id="nav">
         <ul class="nav-links">
-            <li><a class="menuItem" href="https://v4.fabian.lol/" data-cursor="pointer">Old Version</a></li>
-            <li><a class="menuItem" href="https://getalbumcover.fabian.lol/" data-cursor="pointer">HiRes Album Cover</a></li>
+            <li><a class="menuItem" href="#" data-cursor="pointer">Home</a></li>
+            <li><a class="menuItem" href="#vids" data-cursor="pointer">Videos</a></li>
+            <li><a class="menuItem" href="#pics" data-cursor="pointer">Pictures</a></li>
         </ul>
         <a data-cursor="pointer2" href="/#">
             <h1>Fabian Skutta</h1>
@@ -54,12 +57,12 @@
         <div class="hero-container">
             <div class="hero-text">
                 <h2>Hey Ho! <img alt="waving hand" src="https://cdn.fabian.lol/hi.gif"></h2>
-                <p>Welcome to version 5 of my site.</p>
+                <p>I'm Fabian</p>
                 <ul class="socials">
-                        <li><a data-cursor="pointer2" target="_blank" href="https://discordapp.com/users/628637707366694932"><i class="fa-brands fa-discord"></i></a></li>
                         <li><a data-cursor="pointer2" target="_blank" href="https://www.instagram.com/fabianskutta/"><i class="fa-brands fa-instagram"></i></a></li>
                         <li><a data-cursor="pointer2" target="_blank" href="https://github.com/fabianskutta"><i class="fa-brands fa-github"></i></a></li>
                         <li><a data-cursor="pointer2" target="_blank" href="https://dribbble.com/fabianskutta"><i class="fa-brands fa-dribbble"></i></a></li>
+                        <li><a data-cursor="pointer2" target="_blank" href="https://open.spotify.com/user/uvq4h3pn1m39dlo45aeoiswq7"><i class="fa-brands fa-spotify"></i></a></li>
                         <li><a data-cursor="pointer2" target="_blank" href="mailto:hello@fabianskutta.com"><i class="fa-solid fa-envelope"></i></a></li>
                 </ul>
             </div>
@@ -67,13 +70,35 @@
     </section>
 
     <main>
-        <h3>Coming Soon</h3>
-        <div class="pc"><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjE2ZWNjYzM5ZWY3YjMyNzdmMmI5NDAwY2UzOTVkZDRjOGZjNzE2MSZjdD1n/Kfl09udXYhbjajJwEt/giphy.gif" alt=""></div>
-    </main>
+        <h3 id="vids">Videos</h3>
+        <section class="images-grid film">
+            <a class="popup-youtube" href="https://www.youtube-nocookie.com/embed/ZKtq4QcFydQ"><img data-cursor="pointer3" src="https://img.youtube.com/vi/ZKtq4QcFydQ/maxresdefault.jpg"/></a>
+            <a class="popup-youtube" href="https://www.youtube-nocookie.com/embed/WoLOdjMvTFI"><img data-cursor="pointer3" src="https://img.youtube.com/vi/WoLOdjMvTFI/maxresdefault.jpg"/></a>
+        </section>
 
-    <br>
-    <br>
-    <br>
+        <h3 id="pics">Pictures</h3>
+        <section class="images-grid">
+            <img src="./assets/img/KK-Cologne/IMG_3170.jpg"/>
+            <img src="./assets/img/KK-Cologne/IMG_3130.jpg"/>
+            <img src="./assets/img/KK-Cologne/IMG_3143.jpg"/>
+            <img src="./assets/img/KK-Cologne/IMG_3148.jpg"/>
+            <img src="./assets/img/KK-Cologne/IMG_3157.jpg"/>
+
+            <img src="./assets/img/others/FS_03140.JPG"/>
+            <img src="./assets/img/others/FS_04963.JPG"/>
+            <img src="./assets/img/others/FS_05019.JPG"/>
+
+            <img src="./assets/img/7Miles/FS_04731(2).JPG"/>
+            <img src="./assets/img/7Miles/FS_04756(1).JPG"/>
+            <img src="./assets/img/7Miles/FS_04780(1).JPG"/>
+            <img src="./assets/img/7Miles/FS_04784.JPG"/>
+            <img src="./assets/img/7Miles/FS_04796(1).JPG"/>
+            <img src="./assets/img/7Miles/FS_04838(2).JPG"/>
+
+            <img src="./assets/img/others/IMG_0074.jpg"/>
+            <img src="./assets/img/others/IMG_0580.jpg"/>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-container">

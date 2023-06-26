@@ -8,6 +8,7 @@ import '../js/mode';
 import '../js/nav';
 import '../js/footer';
 import '../js/cursor';
+import '../js/images-grid';
 
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -33,3 +34,9 @@ document.addEventListener("visibilitychange", function() {
     document.title = 'Fabian Skutta'; 
   }
 })
+
+$(document).ready(function() {
+	$('.popup-youtube').magnificPopup({
+    type: 'iframe'
+  });
+});

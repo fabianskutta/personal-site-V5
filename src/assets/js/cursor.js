@@ -28,20 +28,33 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
     if (item.dataset.cursor === "pointer2") {
       cursorBorder.style.setProperty("--size", "50px");
     }
+    if (item.dataset.cursor === "pointer3") {
+      cursorBorder.style.setProperty("--size", "80px");
+      cursorBorder.style.setProperty("box-shadow", "0 0 0 0 var(--text1)");
+      cursorBorder.style.setProperty("border-radius", "0");
+      cursorBorder.style.setProperty("background-size", "60%");
+    }
   });
   item.addEventListener("mouseout", (e) => {
     cursorBorder.style.backgroundColor = "unset";
     cursorBorder.style.mixBlendMode = "unset";
     cursorBorder.style.setProperty("--size", "30px");
+    cursorBorder.style.setProperty("box-shadow", "0 0 0 1px var(--text1)");
+    cursorBorder.style.setProperty("border-radius", "50%");
+    cursorBorder.style.setProperty("background-size", "0");
   });
 });
 
 body.addEventListener('mousedown', (event) => {
-    cursorBorder.style.setProperty("--size", "50px");
+    if (!item.dataset.cursor === "pointer3") {
+      cursorBorder.style.setProperty("--size", "50px");
+    }
   });
 
 body.addEventListener('mouseup', (event) => {
-    cursorBorder.style.backgroundColor = "unset";
-    cursorBorder.style.mixBlendMode = "unset";
-    cursorBorder.style.setProperty("--size", "30px");
+    if (!item.dataset.cursor === "pointer3") {
+      cursorBorder.style.backgroundColor = "unset";
+      cursorBorder.style.mixBlendMode = "unset";
+      cursorBorder.style.setProperty("--size", "30px");
+    }
   });

@@ -44,6 +44,10 @@ a {
   background: var(--scrollbar-hover); 
 }
 
+:target {
+  scroll-margin-top: 120px;
+}
+
 main {
   padding: var(--margin);
 }
@@ -100,6 +104,9 @@ h3 {
   border-radius: 50%;
   box-shadow: 0 0 0 1px var(--text1);
   pointer-events: none;
+  background-size: 0;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="384" height="512" viewBox="0 0 384 512" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M73 39.0001C58.2 29.9001 39.6 29.6001 24.5 38.1001C9.4 46.6001 0 62.6001 0 80.0001V432C0 449.4 9.4 465.4 24.5 473.9C39.6 482.4 58.2 482 73 473L361 297C375.3 288.3 384 272.8 384 256C384 239.2 375.3 223.8 361 215L73 39.0001Z" fill="white"/></svg>');
   transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
     height 0.15s ease-out, background-color 0.15s ease-out, opacity 0.25s ease-out;
   z-index: 999;
