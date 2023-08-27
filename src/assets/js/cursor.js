@@ -44,17 +44,3 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
     cursorBorder.style.setProperty("background-size", "0");
   });
 });
-
-body.addEventListener('mousedown', (event) => {
-    if (!item.dataset.cursor === "pointer3") {
-      cursorBorder.style.setProperty("--size", "50px");
-    }
-  });
-
-body.addEventListener('mouseup', (event) => {
-    if (!item.dataset.cursor === "pointer3") {
-      cursorBorder.style.backgroundColor = "unset";
-      cursorBorder.style.mixBlendMode = "unset";
-      cursorBorder.style.setProperty("--size", "30px");
-    }
-  });

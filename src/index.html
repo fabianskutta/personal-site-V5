@@ -106,14 +106,47 @@
                 <div class="fabian-text">Made with <i class="fas fa-heart"></i> by</div>
                 <div class="fabian-text2">
                     <a data-cursor="pointer" class="fabian-profile" href="https://github.com/fabianskutta" target="_blank">
-                        <img src="https://avatars.githubusercontent.com/u/71977333?s=400&u=fac23e7a9ca6f755a2cb80eac72dace3ea85de1a&v=4" alt=""> Fabian Skutta
+                        <img src="https://avatars.githubusercontent.com/u/71977333?s=400&u=fac23e7a9ca6f755a2cb80eac72dace3ea85de1a&v=4" alt=""> me
                     </a>
-                <div class="fabian-profile2">(me <img class="footer-emoji" src="https://media2.giphy.com/media/fSM1fAZJOixky6npXS/giphy.gif" alt=""> )</div>
                 </div>
             </div>
-            <div class="footer-column footer-legal"><li><a data-cursor="pointer" href="https://v4.fabian.lol/">Old Version</a></li><li class="noMobile"><a data-cursor="pointer" href="" id="commit-link" target="_blank">main@<span id="commit"></span></a></li><li><a data-cursor="pointer" id="up" href="#"><i class="fa-solid fa-arrow-up"></i></a></li></div>
+            <div class="footer-column footer-legal"><li><a data-cursor="pointer" id="achievements-btn-footer">show achievements</a></li><li class="noMobile"><a data-cursor="pointer" href="" id="commit-link" target="_blank">main@<span id="commit"></span></a></li><li><a data-cursor="pointer" id="up" href="#"><i class="fas fa-rocket"></i></a></li></div>
         </div>
     </footer>
+
+    <div id="popup" class="popup">
+        <div class="popup-container">
+            <span data-cursor="pointer" class="close">&times;</span>
+            <h3>Can you find all secret achievements?</h3>
+            <div class="popup-flex">
+                <div class="popup-item" id="achievement-1">
+                    <div class="popup-item-container">
+                        <svg class="popup-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.82 122.88" fill="currentColor">
+                            <path d="M28.8,64.94,14.18,112.39H59L44.23,60.1l3.81-2A25.23,25.23,0,1,0,11.29,35.71h0a25.07,25.07,0,0,0,4,13.58A25.42,25.42,0,0,0,26,58.65l4.16,1.91L28.8,64.94ZM2.09,116.1,17.54,66A35.78,35.78,0,0,1,6.43,55,35.41,35.41,0,0,1,.82,35.71h0A35.72,35.72,0,1,1,56.56,65.23l16.26,57.65H0l2.09-6.78Z"/></svg>
+                        <p>secret</p>
+                    </div>
+                </div>
+                <div class="popup-item" id="achievement-2">
+                    <div class="popup-item-container">
+                        <svg class="popup-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.82 122.88" fill="currentColor">
+                            <path d="M28.8,64.94,14.18,112.39H59L44.23,60.1l3.81-2A25.23,25.23,0,1,0,11.29,35.71h0a25.07,25.07,0,0,0,4,13.58A25.42,25.42,0,0,0,26,58.65l4.16,1.91L28.8,64.94ZM2.09,116.1,17.54,66A35.78,35.78,0,0,1,6.43,55,35.41,35.41,0,0,1,.82,35.71h0A35.72,35.72,0,1,1,56.56,65.23l16.26,57.65H0l2.09-6.78Z"/></svg>
+                        <p>secret</p>
+                    </div>
+                </div>
+                <div class="popup-item" id="achievement-3">
+                    <div class="popup-item-container">
+                        <svg class="popup-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.82 122.88" fill="currentColor">
+                            <path d="M28.8,64.94,14.18,112.39H59L44.23,60.1l3.81-2A25.23,25.23,0,1,0,11.29,35.71h0a25.07,25.07,0,0,0,4,13.58A25.42,25.42,0,0,0,26,58.65l4.16,1.91L28.8,64.94ZM2.09,116.1,17.54,66A35.78,35.78,0,0,1,6.43,55,35.41,35.41,0,0,1,.82,35.71h0A35.72,35.72,0,1,1,56.56,65.23l16.26,57.65H0l2.09-6.78Z"/></svg>
+                        <p>secret</p>
+                    </div>
+                </div>
+            </div>
+            <p id="g"></p>
+        </div>
+    </div>
+
+    <div id="notification">
+    </div>
 
     <div id="cursor-border">
     </div>

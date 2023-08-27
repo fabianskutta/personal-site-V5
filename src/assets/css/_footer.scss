@@ -115,8 +115,8 @@ footer {
         }
 
         .footer-column {
-            flex-direction: column;
             margin: 0.5rem 0;
+            justify-content: center;
     
             .fa-heart {
                 color: #F9063B;
