@@ -257,7 +257,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-document.getElementById('achievements-btn-footer').addEventListener('click', event => {
-    achievements();
-})
