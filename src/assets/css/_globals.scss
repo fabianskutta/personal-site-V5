@@ -111,3 +111,24 @@ h3 {
     height 0.15s ease-out, background-color 0.15s ease-out, opacity 0.25s ease-out;
   z-index: 999;
 }
+
+.contact-me {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  .btn {
+      padding: 0.75rem 1rem;
+      background-color: var(--backgroundBtn);
+      border-radius: 10px;
+      transition: 0.3s;
+      font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  
+  .contact-me .btn:hover {
+    background-color: var(--backgroundBtn-hover);
+    transform: scale(1.06);
+}
+}
