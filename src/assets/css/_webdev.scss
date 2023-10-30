@@ -1,0 +1,107 @@
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+}
+
+.project-item {
+    padding: 1.25rem;
+    width: 50%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.project-item-container {
+    min-height: 10rem;
+    background-color: var(--background3);;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    position: relative;
+    transition: all 0.3s;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 0.25rem;
+    }
+
+    h4 {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin: 0;
+    }
+}
+
+.project-info {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.project-badge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        border-radius: 1rem;
+        padding: 0.25rem 0.5rem;
+        margin-left: 0.25rem;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    .vue {
+        border-color: #3fb27f;
+    }
+
+    .nuxt {
+        border-color: #00dc82;
+    }
+
+    .strapi {
+        border-color: #4945ff;
+    }
+
+    .html {
+        border-color: #e44f26;
+    }
+
+    .scss {
+        border-color: #b75f8c;
+    }
+
+    .spotify {
+        border-color: #1cc95a;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .projects-container {
+        flex-direction: column;
+        padding: 0;
+    }
+    .project-item {
+        width: 100%;
+    }
+
+    .project-info {
+        flex-direction: column;
+
+        .project-badge {
+            margin-top: 0.5rem;
+        }
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .project-item-container:hover {
+        box-shadow: 6px 10px 19px 0px rgba(0,0,0,0.4);
+        transform: scale(1.03);
+    }
+    
+    .project-item-container:active {
+        transform: scale(1);
+    }
+  }
