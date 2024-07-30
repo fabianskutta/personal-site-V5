@@ -115,15 +115,60 @@ h3 {
 .contact-me {
   display: flex;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   .btn {
       padding: 0.75rem 1rem;
       background-color: var(--backgroundBtn);
       border-radius: 10px;
       transition: 0.3s;
       font-size: 1.25rem;
+      margin-right: 2rem;
   }
 }
+
+.message-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 3rem;
+  align-items: center;
+
+  .btn {
+    padding: 0.75rem 1rem;
+    background-color: var(--backgroundBtn);
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 1.25rem;
+}
+}
+
+.message {
+  border-radius: 60px;
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -.015em;
+  margin-bottom: 25px;
+  border: 3px solid #000;
+  padding: 20px 40px 20px;
+  position: relative;
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.message:after {
+  width: 34px;
+  height: 30px;
+  position: absolute;
+  left: -.8%;
+  bottom: -11px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMy41MiAyOS41OCc+PHBhdGggZD0nTTEzLjQzLDBTMTQuMTEsMTYsMCwyOS41N0MtLjI4LDI5Ljg0LDI4LjY1LDI1LjQ5LDMzLjUyLDZaJyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgwKScvPjwvc3ZnPgo=);
+  background-position: 0 0;
+  transition: opacity .4s;
+  background-size: 100% auto;
+  content: "";
+}
+
 
 @media screen and (min-width: 900px) {
   
@@ -131,4 +176,15 @@ h3 {
     background-color: var(--backgroundBtn-hover);
     transform: scale(1.06);
 }
+
+}
+
+@media screen and (max-width: 900px) {
+  
+
+.message {
+  font-size: 17px;
+  padding: 15px 35px 15px;
+}
+
 }
