@@ -8,7 +8,7 @@ function updateStatus() {
           document.getElementById('spotifyimg').innerHTML = `<img id="spotifyCover" src="${data.spotify.album_art_url}" crossOrigin="anonymous" alt="">`;
           setTimeout(function(){
             var rgb = getAverageRGB(document.getElementById('spotifyCover'));
-            document.getElementsByTagName( 'html' )[0].style.setProperty('--accent2', 'rgb('+rgb.r+','+rgb.g+','+rgb.b+','+0.30+')');
+            document.getElementsByTagName( 'html' )[0].style.setProperty('--accent2', 'rgb('+rgb.r+','+rgb.g+','+rgb.b+','+0.8+')');
         }, 150);
         } else {
           document.getElementById('spotify').innerHTML = ``;
