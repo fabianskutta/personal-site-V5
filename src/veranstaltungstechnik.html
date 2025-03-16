@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabian Skutta - Veranstaltungstechnik</title>
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cdn.fabian.lol/logos/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.fabian.lol/logos/favicon.png">
+
+    <link rel="icon" type="image/png" href="https://cdn.fabian.lol/logos/favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://cdn.fabian.lol/logos/favicon.png" sizes="96x96">
+
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://kit.fontawesome.com/97e635c580.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+</head>
+<body>
+    <nav id="nav">
+        <ul class="nav-links">
+            <li><a class="menuItem" href="/" data-cursor="pointer">Home</a></li>
+            <li><a class="menuItem" href="/webentwicklung.html" data-cursor="pointer">Webentwicklung</a></li>
+            <li><a class="menuItem" href="/veranstaltungstechnik.html" data-cursor="pointer">Veranstaltungstechnik</a></li>
+        </ul>
+        <a data-cursor="pointer2" href="/#">
+            <h1>Fabian Skutta</h1>
+            <p>Veranstaltungstechnik</p>
+        </a>
+        <ul class="nav-btns">
+            <li><a data-cursor="pointer" id="mode" class="navbtn">
+                <i class="fa-solid fa-desktop"></i>
+            </a></li>
+            <li>
+                <a data-cursor="pointer" id="hamburger" class="navbtn">
+                    <i class="fas fa-bars menuIcon"></i>
+                    <i class="fas fa-times closeIcon"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <div id="c1" class="circle c1"></div>
+        <div id="c2" class="circle c2"></div>
+        <div id="c3" class="circle c3"></div>
+        <div class="hero-bg"></div>
+        <div class="hero-bar-container">
+            <div class="hero-bar">
+                <div class="statusContainer"><i class="fas fa-circle" id="status-icon"></i>
+                    <div id="status"></div></div>
+                <div id="spotify"></div>
+                <div id="spotifyimg"></div>
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-text">
+                <h2>Veranstaltungstechnik</h2>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <h3>Leistungen</h3>
+        <section>
+            <div class="services">
+                <div class="service">
+                    <div class="serviceimg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M533.6 32.5C598.5 85.2 640 165.8 640 256s-41.5 170.7-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64l0 384c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352 64 352c-35.3 0-64-28.7-64-64l0-64c0-35.3 28.7-64 64-64l67.8 0L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></svg></div>
+                    <h2>Tontechnik</h2>
+                </div>
+                <div class="service">
+                    <div class="serviceimg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2c0 0 0 0 0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4c0 0 0 0 0 0c19.8 27.1 39.7 54.4 49.2 86.2l160 0zM192 512c44.2 0 80-35.8 80-80l0-16-160 0 0 16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></svg></div>
+                    <h2>Lichttechnik</h2>
+                </div>
+                <div class="service">
+                    <div class="serviceimg"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M248 0L208 0c-26.5 0-48 21.5-48 48l0 112c0 35.3 28.7 64 64 64l128 0c35.3 0 64-28.7 64-64l0-112c0-26.5-21.5-48-48-48L328 0l0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80zM64 256c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l160 0c35.3 0 64-28.7 64-64l0-128c0-35.3-28.7-64-64-64l-40 0 0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80-40 0zM352 512l160 0c35.3 0 64-28.7 64-64l0-128c0-35.3-28.7-64-64-64l-40 0 0 80c0 8.8-7.2 16-16 16l-48 0c-8.8 0-16-7.2-16-16l0-80-40 0c-15 0-28.8 5.1-39.7 13.8c4.9 10.4 7.7 22 7.7 34.2l0 160c0 12.2-2.8 23.8-7.7 34.2C323.2 506.9 337 512 352 512z"/></svg></div>
+                    <h2>Materialverleih</h2>
+                </div>
+            </div>
+        </section>
+        <h3>Impressionen</h3>
+        <section class="images-grid">
+            <img src="./assets/img/others/WhatsApp Bild 2024-07-29 um 17.00.37_0fdb8517.jpg"/>
+            <img src="./assets/img/others/WhatsApp Bild 2024-07-29 um 17.00.37_ada8676b.jpg"/>
+            <img src="./assets/img/others/WhatsApp Bild 2024-07-29 um 17.00.39_1c8d3a9b.jpg"/>
+            <img src="./assets/img/others/WhatsApp Bild 2024-07-29 um 17.00.40_d7b824c9.jpg"/>
+
+            <img src="./assets/img/vt/401479316_1089077335420671_1742650554876343572_n.jpg"/>
+            <img src="./assets/img/7Miles/FS_04731(2).JPG"/>
+            <img src="./assets/img/vt/RookieFstvl2023-1738.JPG"/>
+            <img src="./assets/img/vt/CraftBeerFestival-M_J-0651(1).JPG"/>
+            <img src="./assets/img/vt/CraftBeerFestival-Woodship-9882(1).JPG"/>
+            <img src="./assets/img/vt/CraftBeerFestival-kleinstadt-2339.JPG"/>
+        </section>
+        <h3>Referenzen</h3>
+        <section>
+            <div class="services">
+                <div class="service client">
+                    <div class="clientimg"><img class="lightimg" src="./assets/img/logo/logo_schuhfabrik-ahlen.png" alt=""></div>
+                </div>
+                <div class="service">
+                    <div class="clientimg"><img class="darkimg" src="./assets/img/logo/Woodways_m_Claim_4c_schwarz_Zeichenflaeche_1_2f45f2ba77.png" alt=""></div>
+                </div>
+                <div class="service">
+                    <h2>OK Booking - Opper & Küpper GbR</h2>
+                </div>
+                <div class="service">
+                    <div class="clientimg"><img class="lightimg" src="./assets/img/logo/logo-white.png" alt=""></div>
+                </div>
+                <div class="service">
+                    <div class="clientimg"><img class="lightimg" src="./assets/img/logo/logo_fats_neu (1).png" alt=""></div>
+                </div>
+                <div class="service">
+                    <h2>Scouts MC Germany</h2>
+                </div>
+                <div class="service">
+                    <h2>Tor III GM-Hütte</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="fabian-text">Made with <i class="fas fa-heart"></i> by</div>
+                <div class="fabian-text2">
+                    <a data-cursor="pointer" class="fabian-profile" href="https://github.com/fabianskutta" target="_blank">
+                        <img src="https://avatars.githubusercontent.com/u/71977333?s=400&u=fac23e7a9ca6f755a2cb80eac72dace3ea85de1a&v=4" alt=""> me
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column footer-legal"><li><a data-cursor="pointer" target="_blank" href="https://legal.fabian.lol/impressum/">Impressum</a></li><li><a data-cursor="pointer" target="_blank" href="https://legal.fabian.lol/datenschutz/">Datenschutz</a></li><li class="noMobile"><a data-cursor="pointer" href="" id="commit-link" target="_blank">main@<span id="commit"></span></a></li><li><a data-cursor="pointer" id="up" href="#"><i class="fas fa-rocket"></i></a></li></div>
+        </div>
+    </footer>
+
+    <div id="popup" class="popup">
+        <div class="popup-container">
+            <span data-cursor="pointer" class="close">&times;</span>
+            <h3>Can you find all secret achievements?</h3>
+            <div class="popup-flex">
+                <div class="popup-item" id="achievement-1">
+                    <div class="popup-item-container">
+                        <svg class="popup-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.82 122.88" fill="currentColor">
+                            <path d="M28.8,64.94,14.18,112.39H59L44.23,60.1l3.81-2A25.23,25.23,0,1,0,11.29,35.71h0a25.07,25.07,0,0,0,4,13.58A25.42,25.42,0,0,0,26,58.65l4.16,1.91L28.8,64.94ZM2.09,116.1,17.54,66A35.78,35.78,0,0,1,6.43,55,35.41,35.41,0,0,1,.82,35.71h0A35.72,35.72,0,1,1,56.56,65.23l16.26,57.65H0l2.09-6.78Z"/></svg>
+                        <p>secret</p>
+                    </div>
+                </div>
+                <div class="popup-item" id="achievement-2">
+                    <div class="popup-item-container">
+                        <svg class="popup-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.82 122.88" fill="currentColor">
+                            <path d="M28.8,64.94,14.18,112.39H59L44.23,60.1l3.81-2A25.23,25.23,0,1,0,11.29,35.71h0a25.07,25.07,0,0,0,4,13.58A25.42,25.42,0,0,0,26,58.65l4.16,1.91L28.8,64.94ZM2.09,116.1,17.54,66A35.78,35.78,0,0,1,6.43,55,35.41,35.41,0,0,1,.82,35.71h0A35.72,35.72,0,1,1,56.56,65.23l16.26,57.65H0l2.09-6.78Z"/></svg>
+                        <p>secret</p>
+                    </div>
+                </div>
+                <div class="popup-item" id="achievement-3">
+                    <div class="popup-item-container">
+                        <svg class="popup-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.82 122.88" fill="currentColor">
+                            <path d="M28.8,64.94,14.18,112.39H59L44.23,60.1l3.81-2A25.23,25.23,0,1,0,11.29,35.71h0a25.07,25.07,0,0,0,4,13.58A25.42,25.42,0,0,0,26,58.65l4.16,1.91L28.8,64.94ZM2.09,116.1,17.54,66A35.78,35.78,0,0,1,6.43,55,35.41,35.41,0,0,1,.82,35.71h0A35.72,35.72,0,1,1,56.56,65.23l16.26,57.65H0l2.09-6.78Z"/></svg>
+                        <p>secret</p>
+                    </div>
+                </div>
+            </div>
+            <p id="g"></p>
+        </div>
+    </div>
+
+    <div id="notification">
+    </div>
+
+    <div id="cursor-border">
+    </div>
+</body>
+</html>

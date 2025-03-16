@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fabian Skutta</title>
+    <title>Fabian Skutta - Webentwicklung</title>
 
     <link rel="apple-touch-icon" type="image/png" href="https://cdn.fabian.lol/logos/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn.fabian.lol/logos/favicon.png">
@@ -19,18 +19,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="./assets/js/main.js"></script>
 </head>
-<body class="hero-full">
+<body>
     <nav id="nav">
+        <ul class="nav-links">
+            <li><a class="menuItem" href="/" data-cursor="pointer">Home</a></li>
+            <li><a class="menuItem" href="/webentwicklung.html" data-cursor="pointer">Webentwicklung</a></li>
+            <li><a class="menuItem" href="/veranstaltungstechnik.html" data-cursor="pointer">Veranstaltungstechnik</a></li>
+        </ul>
         <a data-cursor="pointer2" href="/#">
             <h1>Fabian Skutta</h1>
+            <p>Webentwicklung</p>
         </a>
         <ul class="nav-btns">
             <li><a data-cursor="pointer" id="mode" class="navbtn">
                 <i class="fa-solid fa-desktop"></i>
             </a></li>
+            <li>
+                <a data-cursor="pointer" id="hamburger" class="navbtn">
+                    <i class="fas fa-bars menuIcon"></i>
+                    <i class="fas fa-times closeIcon"></i>
+                </a>
+            </li>
         </ul>
     </nav>
-    <section class="hero hero-full">
+    <section class="hero">
         <div id="c1" class="circle c1"></div>
         <div id="c2" class="circle c2"></div>
         <div id="c3" class="circle c3"></div>
@@ -45,21 +57,56 @@
         </div>
         <div class="hero-container">
             <div class="hero-text">
-                <h2 id="maintitle">Hey Ho! <img alt="waving hand" src="https://cdn.fabian.lol/hi.gif"></h2>
-                <p>Wähle deinen Bereich und leg los!</p>
-            </div>
-            <div class="topics">
-                <a class="topic" data-cursor="pointer" href="/webentwicklung.html">
-                    <div class="topicimg"><img id="topic2img" src="https://i.giphy.com/Kfl09udXYhbjajJwEt.webp" alt=""></div>
-                    <h2>Webentwicklung</h2>
-                </a>
-                <a class="topic" data-cursor="pointer" href="/veranstaltungstechnik.html">
-                    <div class="topicimg"><img id="topic1img" src="https://i.giphy.com/S3nZ8V9uemShxiWX8g.webp" alt=""></div>
-                    <h2>Veranstaltungstechnik</h2>
-                </a>
+                <h2>Webentwicklung</h2>
             </div>
         </div>
     </section>
+
+    <main>
+        <h3>Referenzen</h3>
+        <section class="projects">
+            <div class="projects-container">
+                <a data-cursor="pointer" class="project-item" href="https://woodways.ms/" target="_blank">
+                    <div class="project-item-container">
+                        <div class="project-info"><h4>Woodways</h4> <div class="project-badge"><span class="vue">Vue.js</span><span class="nuxt">Nuxt</span><span class="strapi">Stapi CMS</span></div></div>
+                        <img src="./assets/img/webdev/woodways.png" alt="">
+                    </div>
+                </a>
+                <a data-cursor="pointer" class="project-item" href="https://github.com/fabianskutta/Vocabify" target="_blank">
+                    <div class="project-item-container">
+                        <div class="project-info"><h4>Vocabify</h4> <div class="project-badge"><span class="vue">Vue.js</span><span class="nuxt">Nuxt</span><span class="strapi">Supabase</span></div></div>
+                        <img src="./assets/img/webdev/vocabify.png" alt="">
+                    </div>
+                </a>
+                <a data-cursor="pointer" class="project-item" href="https://getalbumcover.fabian.lol/" target="_blank">
+                    <div class="project-item-container">
+                        <div class="project-info"><h4>Download HiRes Album cover</h4> <div class="project-badge"><span class="html">HTML</span><span class="scss">SCSS</span><span class="js">JS</span><span class="spotify">Spotify API</span></div></div>
+                        <img src="./assets/img/webdev/cover.png" alt="">
+                    </div>
+                </a>
+                <a data-cursor="pointer" class="project-item" href="https://rookie-festival.de/" target="_blank">
+                    <div class="project-item-container">
+                        <div class="project-info"><h4>Rookie Festival</h4> <div class="project-badge"><span class="html">HTML</span><span class="scss">SCSS</span><span class="js">JS</span></div></div>
+                        <img src="./assets/img/webdev/rookie.png" alt="">
+                    </div>
+                </a>
+            </div>
+            </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <div class="fabian-text">Made with <i class="fas fa-heart"></i> by</div>
+                <div class="fabian-text2">
+                    <a data-cursor="pointer" class="fabian-profile" href="https://github.com/fabianskutta" target="_blank">
+                        <img src="https://avatars.githubusercontent.com/u/71977333?s=400&u=fac23e7a9ca6f755a2cb80eac72dace3ea85de1a&v=4" alt=""> me
+                    </a>
+                </div>
+            </div>
+            <div class="footer-column footer-legal"><li><a data-cursor="pointer" target="_blank" href="https://legal.fabian.lol/impressum/">Impressum</a></li><li><a data-cursor="pointer" target="_blank" href="https://legal.fabian.lol/datenschutz/">Datenschutz</a></li><li class="noMobile"><a data-cursor="pointer" href="" id="commit-link" target="_blank">main@<span id="commit"></span></a></li><li><a data-cursor="pointer" id="up" href="#"><i class="fas fa-rocket"></i></a></li></div>
+        </div>
+    </footer>
 
     <div id="popup" class="popup">
         <div class="popup-container">

@@ -1,0 +1,95 @@
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   }
+  
+   .service {
+    width: 300px;
+    height: 200px;
+    padding: 3rem;
+    margin: 1.5rem;
+    background-color: var(--background4);
+    background-position: center;
+    background-repeat: repeat;
+    -webkit-backdrop-filter: blur(1.35rem);
+    backdrop-filter: blur(1.35rem);
+    border-color: rgba(255,255,255,0.09);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s;
+  
+  
+    h2 {
+      font-size: 1.05em;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+    
+      .serviceimg {
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+
+        svg {
+            color: var(--text1);
+        }
+      }
+
+      .clientimg {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: auto;
+            height: auto;
+        }
+
+      }
+  
+   }
+
+
+   @media screen and (max-width: 900px) {
+
+    .services {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .service {
+            margin: 1rem;
+          }
+       }
+  }
+
+
+  .darkmode .darkimg {
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+}
+
+.lightmode .darkimg {
+    -webkit-filter: grayscale(1) invert(0);
+    filter: grayscale(1) invert(0);
+}
+
+.darkmode .lightimg {
+    -webkit-filter: grayscale(1) invert(0);
+    filter: grayscale(1) invert(0);
+}
+
+.lightmode .lightimg {
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+}

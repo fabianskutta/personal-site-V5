@@ -27,9 +27,4 @@ let container = document.querySelector(".hero");
       return r;
     }
 
-const tl = gsap.timeline({defaults: {duration: 0.75}})
-
-tl.fromTo('.hero-text h2', {y: 80, opacity:0}, {y: 0, opacity:1}, "+0.5");
-tl.fromTo('.hero-text p', {y: 50, opacity:0}, {y: 0, opacity:1}, "-=0.40");
-tl.fromTo('.hero-text .socials', {y: 50, opacity:0}, {y: 0, opacity:1}, "-=0.40");
 

@@ -2,12 +2,12 @@
 import '../css/main.scss';
 
 // JS
+import '../js/cursor';
 import '../js/heroAnimation';
 import '../js/bar';
 import '../js/mode';
-import '../js/nav';
 import '../js/footer';
-import '../js/cursor';
+import '../js/nav';
 import '../js/images-grid';
 
 window.onscroll = function() {scrollFunction()};
@@ -18,25 +18,3 @@ function scrollFunction() {
     document.getElementById("nav").classList.remove("nav-bg");
   }
 }
-
-function getRandom (list) {
-  return list[Math.floor((Math.random()*list.length))];
-}
-
-
-// change title when another tab is opened (inspired by https://bitpunk.de/)
-document.addEventListener("visibilitychange", function() {
-  if (document.visibilityState === 'hidden') {
-    var randomElement = getRandom(['😭 I miss you...', '(4) Matches 🔥', '🤔 Where are you?'])
-    var newtitle = `${randomElement} • Fabian`;
-    document.title = newtitle;
-  } else {
-    document.title = 'Fabian Skutta'; 
-  }
-})
-
-$(document).ready(function() {
-	$('.popup-youtube').magnificPopup({
-    type: 'iframe'
-  });
-});

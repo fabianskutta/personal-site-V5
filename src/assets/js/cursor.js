@@ -44,3 +44,20 @@ document.querySelectorAll("[data-cursor]").forEach((item) => {
     cursorBorder.style.setProperty("background-size", "0");
   });
 });
+
+var oldtitle = document.title;
+
+// change title when another tab is opened (inspired by https://bitpunk.de/)
+document.addEventListener("visibilitychange", function() {
+  if (document.visibilityState === 'hidden') {
+    var randomElement = getRandom(['😭 I miss you...', '(4) Matches 🔥', '🤔 Where are you?'])
+    var newtitle = `${randomElement} • Fabian`;
+    document.title = newtitle;
+  } else {
+    document.title = oldtitle; 
+  }
+})
+
+function getRandom (list) {
+  return list[Math.floor((Math.random()*list.length))];
+}
