@@ -50,7 +50,7 @@ setInterval(updateStatus, 15000);
 function getAverageRGB(imgEl) {
 
   var blockSize = 5, // only visit every 5 pixels
-      defaultRGB = {r:249,g:6,b:59}, // for non-supporting envs
+      defaultRGB = {r:133,g:55,b:44}, // for non-supporting envs
       canvas = document.createElement('canvas'),
       context = canvas.getContext && canvas.getContext('2d'),
       data, width, height,
