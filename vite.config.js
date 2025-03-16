@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitest/config';
 import { resolve } from 'path';
+const root = resolve( __dirname, 'src');
 
 export default defineConfig({
 	test: {
