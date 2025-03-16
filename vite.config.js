@@ -10,5 +10,16 @@ export default defineConfig({
 	build: {
 		emptyOutDir: true,
 		outDir: '../dist',
+		rollupOptions: {
+			output: {
+			  assetFileNames: `assets/[name].[ext]`
+			},
+
+			input: {
+				main: resolve(root, 'index.html'),
+				webentwicklung: resolve(root, 'webentwicklung.html'),
+				veranstaltungstechnik: resolve(root, 'veranstaltungstechnik.html'),
+			}
+		  }
 	},
 });
