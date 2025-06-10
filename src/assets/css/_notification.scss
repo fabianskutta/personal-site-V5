@@ -80,10 +80,11 @@
 
 @media screen and (max-width: 900px) {
     .notification-container{
-        width: 100%;
+        width: calc(100% - var(--margin) - var(--margin));
         right: 0;
         left: 0;
         bottom: 0;
+        margin: var(--margin) var(--margin) 120px var(--margin);
     }
 
     .btn-small {
