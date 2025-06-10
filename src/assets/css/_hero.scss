@@ -7,6 +7,10 @@
 .hero-full {
   height: 100%;
   overflow: hidden;
+
+  .hero-bg {
+    height: 150%;
+}
 }
 
 .hero-bg {
@@ -241,14 +245,14 @@
 }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width:1200px) {
 
   .hero-container {
 
     h2 {
         font-size: 2rem;
         font-weight: 700;
-        margin: 0;
+        margin-bottom: 1rem;
 
         img {
           height: 70px;
@@ -273,6 +277,9 @@
   }
 
   .hero-bar-container {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
 
     .hero-bar{
       font-size: 16px;
@@ -296,6 +303,15 @@
       height: 80px;
     }
   }
+
+  .hero {
+    height: 25rem;
+}
+
+.hero-full {
+  height: calc(100% - 100px);
+}
+
 
 }
 
