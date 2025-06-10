@@ -104,6 +104,7 @@ footer {
 
 @media screen and (max-width: 900px) {
     footer {
+
     
         h1 {
             display: none;
@@ -112,6 +113,7 @@ footer {
     
         .footer-container {
             flex-direction: column-reverse;
+            margin-bottom: 100px;
         }
 
         .footer-column {
